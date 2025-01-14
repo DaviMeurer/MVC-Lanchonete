@@ -69,3 +69,4 @@ def send_mail(produtos):
 
 #main
 send_mail(listaProdutos())
+print(1)
