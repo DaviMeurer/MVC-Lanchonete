@@ -71,6 +71,7 @@ def send_mail(produtos):
     except Exception as e:
         print("Erro ao enviar e-mail: ", e)
 
+#Nova função de enviar o e-mail da soma dos produtos
 def send_soma(preco):
     destinatario = os.getenv("GERENTE_EMAIL")
     remetente = os.getenv("SMTP_USER")
@@ -100,7 +101,8 @@ def send_soma(preco):
             print("E-mail da soma enviado")
     except Exception as e:
         print("Erro ao enviar e-mail: ", e)
-
+        
+#junção para enviar cada e-mail separadamente
 produtos_zerados, soma_precos = listaProdutos()
 
 send_mail(produtos_zerados)
